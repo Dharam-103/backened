@@ -20,7 +20,8 @@ app.use("/bed",bedRouter);
 app.use("/rack",rackRouter)
 app.use("/floor",floorRouter)
 app.use("chair",chairRouter)
-app.use("/cart",auth,cartRouter);
+app.use(auth)
+app.use("/cart",cartRouter);
 
 app.listen(process.env.PORT,async()=>{
     try{
