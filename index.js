@@ -11,12 +11,14 @@ const { rackRouter } = require("./Routes/racks.route");
 const { floorRouter } = require("./Routes/floor.route");
 const { chairRouter } = require("./Routes/chair.route");
 const { cartRouter } = require("./Routes/cart.route");
+const { adminRouter } = require("./Routes/admin.route");
 
 app.use(cors());
 app.use(express.json());
 app.use("/users",userRouter);
 app.use("/sofas",sofaRouter);
 app.use("/bed",bedRouter);
+app.use("/admin",adminRouter)
 app.use("/rack",rackRouter)
 app.use("/floor",floorRouter)
 app.use("chair",chairRouter)
